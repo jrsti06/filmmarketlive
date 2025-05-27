@@ -5,8 +5,156 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Film Market Live</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
+    }
+    .top-banner {
+      background: linear-gradient(to right, #f73eff, #ff8cc6);
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .site-header {
+      background-color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .site-logo {
+      max-width: 300px;
+      height: auto;
+    }
+    .main-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    .main-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .main-nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+    .main-nav a:hover {
+      color: #f73eff;
+    }
+    .main-content {
+      padding: 20px;
+    }
+    .content-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .main-column {
+      flex: 1 1 65%;
+    }
+    .sidebar {
+      flex: 1 1 30%;
+    }
+    .hero-story,
+    .feature-story,
+    .side-story {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+    }
+    .hero-story img,
+    .feature-story img,
+    .side-story img,
+    .ad-block img,
+    .banner-break img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .hero-story h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 10px 0;
+    }
+    .feature-story h2,
+    .side-story h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .hero-story a,
+    .feature-story a,
+    .side-story a {
+      color: #f73eff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .ad-block {
+      margin-bottom: 20px;
+    }
+    .trending-box {
+      background-color: #f2f2f2;
+      padding: 15px;
+      border-left: 5px solid #f73eff;
+      margin-bottom: 20px;
+    }
+    .trending-box h4 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+    }
+    .trending-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .trending-box li {
+      margin-bottom: 10px;
+    }
+    .trending-box a {
+      color: #000;
+      text-decoration: none;
+    }
+    .trending-box a:hover {
+      color: #f73eff;
+    }
+    .banner-break {
+      margin: 40px auto;
+      text-align: center;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .content-grid {
+        flex-direction: column;
+      }
+      .main-column,
+      .sidebar {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="top-banner">BREAKING: Mooch Tapes Accidentally Mailed to Tribeca Instead of Rejecta</div>
   <header class="site-header">
     <img src="images/fml-logo.png" alt="Film Market Live Logo" class="site-logo" />
   </header>
@@ -24,42 +172,34 @@
   <main class="main-content">
     <div class="content-grid">
       <div class="main-column">
-        <!-- Hero Story -->
         <article class="hero-story">
-          <img src="images/hero_rejecta.jpg" alt="Rejecta Festival Banner">
+          <img src="images/mooch-announcement.png" alt="Rejecta Festival Banner">
           <h1>Filmmakers Rejected by Tribeca Launch Rival Festival Across the Street — Rejecta Is Born from Bitterness, Brilliance</h1>
-          <p>
-            A group of hopeless, hungry, and painfully self-aware filmmakers have done the unthinkable: turned rejection into red carpet glory with the creation of Rejecta Film Festival — a full-blown faux festival held directly across the street from Tribeca.
-          </p>
+          <p>A group of hopeless, hungry, and painfully self-aware filmmakers have done the unthinkable: turned rejection into red carpet glory with the creation of Rejecta Film Festival — a full-blown faux festival held directly across the street from Tribeca.</p>
           <a href="#">Read Full Story →</a>
         </article>
-      
-        <!-- Featured Mooch Story -->
+
         <article class="feature-story">
-          <img src="images/mooch_premiere.jpg" alt="Mooch Premiere">
+          <img src="images/mooch-poster.jpg" alt="Mooch Premiere">
           <h2>'Mooch' Set to Premiere at Rejecta — Sources Call It a Cry for Help in Feature Film Form</h2>
-          <p>
-            Described by its creators as "a chaotic blend of emo, ego, and existential dread," Mooch will make its world debut at Rejecta, likely in front of an audience of confused tourists and emotionally exhausted filmmakers.
-          </p>
+          <p>Described by its creators as "a chaotic blend of emo, ego, and existential dread," Mooch will make its world debut at Rejecta, likely in front of an audience of confused tourists and emotionally exhausted filmmakers.</p>
+          <img src="images/mooch-2.png" alt="Mooch Still">
           <a href="#">View Article →</a>
         </article>
-      
-        <!-- Side Story -->
+
         <aside class="side-story">
-          <img src="images/mooch_bowling.jpg" alt="Mooch Cast Bowling">
+          <img src="images/bowling.jpg" alt="Mooch Cast Bowling">
           <h3>'Mooch' Wins Miss Congeniality at IFFBoston's Bowling Night</h3>
-          <p>
-            While the film walked away from the Boston premiere without any major prizes, the Mooch cast dominated the afterparty bowling lane — and left with the coveted Miss Congeniality award (spray-painted on a spare pin).
-          </p>
+          <p>While the film walked away from the Boston premiere without any major prizes, the Mooch cast dominated the afterparty bowling lane — and left with the coveted Miss Congeniality award (spray-painted on a spare pin).</p>
           <a href="#">More →</a>
         </aside>
       </div>
-  
+
       <aside class="sidebar">
         <div class="ad-block">
-          <img src="images/ad_placeholder1.jpg" alt="Fake Ad 1" />
+          <img src="images/travel-baby.png" alt="Fake Ad 1">
         </div>
-  
+
         <div class="trending-box">
           <h4>Trending</h4>
           <ul>
@@ -69,10 +209,20 @@
             <li><a href="#">Rejecta to Launch NFT Marketplace, Immediately Regrets It</a></li>
           </ul>
         </div>
-  
+
         <div class="ad-block">
-          <img src="images/ad_placeholder2.jpg" alt="Fake Ad 2" />
+          <img src="images/bounce-back.png" alt="Fake Ad 2">
         </div>
       </aside>
     </div>
+
+    <div class="banner-break">
+      <img src="images/mooch-tape.pdf" alt="Mooch Banner Tape">
+    </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Film Market Live. All fake stories reserved.</p>
+  </footer>
+</body>
+</html>
