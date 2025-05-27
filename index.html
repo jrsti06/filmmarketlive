@@ -5,7 +5,204 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Film Market Live</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
+    }
+    a {
+      color: #f73eff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .news-alert {
+      background-color: #f73eff;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .news-alert a {
+      background-color: white;
+      color: #f73eff;
+      padding: 5px 10px;
+      margin-left: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .site-header {
+      background-color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .site-logo {
+      max-width: 300px;
+      height: auto;
+    }
+    .breaking-banner {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    .main-nav {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+    .main-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .main-nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+    .main-nav a:hover {
+      color: #f73eff;
+    }
+    .main-content {
+      padding: 20px;
+    }
+    .content-grid {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .main-column {
+      flex: 0 1 65%;
+    }
+    .sidebar {
+      flex: 0 1 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero-story,
+    .feature-story,
+    .side-story {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+    }
+    .hero-story img,
+    .feature-story img,
+    .side-story img {
+      max-width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    .hero-story h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 10px 0;
+    }
+    .feature-story h2,
+    .side-story h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .ad-block img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+      background-color: #f3f3f3;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .carousel-item {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 320px;
+      height: auto;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+    }
+    .carousel-item p {
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px;
+    }
+    .carousel-item p span {
+      color: #f73eff;
+      font-weight: bold;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      background-color: #f73eff;
+      padding: 4px 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+    .banner-break {
+      margin: 40px auto;
+      text-align: center;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer img {
+      width: 24px;
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .content-grid {
+        flex-direction: column;
+      }
+      .main-column,
+      .sidebar {
+        flex: 1 1 100%;
+      }
+      .ad-block img {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="news-alert">
