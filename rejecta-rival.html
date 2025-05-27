@@ -33,15 +33,55 @@
       border-left: 4px solid #f73eff;
       color: #555;
     }
+    .back-home {
+      display: inline-block;
+      background-color: #f73eff;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .site-header {
+      background-color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+    }
+    .site-logo {
+      max-width: 300px;
+      height: auto;
+    }
+    .breaking-banner {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+    footer img {
+      width: 24px;
+      margin-top: 10px;
+    }
   </style>
 </head>
-<header class="site-header">
+
+<body>
+  <header class="site-header">
     <a href="index.html">
       <img src="images/fml-logo.png" alt="Film Market Live Logo" class="site-logo" />
     </a>
-    <img src="images/breaking-1.jpg" alt="Breaking Banner" class="breaking-banner" />
+    <a href="cannes-footwear.html">
+      <img src="images/breaking-1.jpg" alt="Breaking Banner" class="breaking-banner" />
+    </a>
   </header>
-<body>
+
   <div class="article-container">
     <h1>Filmmakers Rejected by Tribeca Launch Rival Festival Across the Street — Rejecta Is Born from Bitterness, Brilliance</h1>
 
@@ -58,4 +98,31 @@
     <p>With banners duct-taped to nearby trash cans and a red carpet made from spray-painted picnic blankets, the festival embraces its underdog roots.</p>
 
     <blockquote>
-      “You know how Tribeca has that glossy energy?” said programming director Sam Levine. “We have glossy too — it’s just from the
+      “You know how Tribeca has that glossy energy?” said programming director Sam Levine. “We have glossy too — it’s just from the spilled Monster energy drinks on our risers.”
+    </blockquote>
+
+    <p>As of press time, the Rejecta team is in talks to secure a second venue: the parking lot behind a CVS. Tribeca declined to comment, mostly because they hadn’t noticed the festival existed yet.</p>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Film Market Live. All fake stories reserved.</p>
+    <a href="https://www.instagram.com/filmmarketlive/" target="_blank">
+      <img src="images/insta_logo_black.png" alt="Instagram">
+    </a>
+    <div style="margin-top: 15px;">
+      <a href="index.html" style="
+        background-color: var(--pink);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+      ">← Back to Home</a>
+    </div>
+  </footer>
+</body>
+</html>
