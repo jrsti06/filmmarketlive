@@ -120,13 +120,12 @@
   .hero-story img,
   .feature-story img,
   .side-story img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    max-height: 600px;
-    object-fit: cover;
-    margin-bottom: 10px;
+    object-fit: contain;
+    max-width: 100%;
     border-radius: 4px;
-  }
+}
   
   .hero-story h1 {
     font-family: 'Playfair Display', serif;
@@ -290,4 +289,16 @@
       font-size: 13px;
     }
   }
+  .hero-story img,
+.feature-story img,
+.side-story img,
+.breaking-banner,
+.site-logo {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
   
