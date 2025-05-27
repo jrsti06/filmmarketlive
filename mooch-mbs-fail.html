@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mooch’s Housing Market Mishap</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Mooch Tries to Sell Mortgage-Backed Securities</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     .article-container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
       background-color: #fff;
-      font-family: 'Roboto', sans-serif;
+    }
+    .article-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 20px;
     }
     .article-container h1 {
       font-family: 'Playfair Display', serif;
@@ -25,48 +31,71 @@
       color: #333;
       margin-bottom: 20px;
     }
-    .article-container blockquote {
-      font-style: italic;
-      margin: 20px 0;
-      padding-left: 20px;
-      border-left: 4px solid #f73eff;
-      color: #555;
-    }
   </style>
+  <script>
+    function toggleMenu() {
+      document.body.classList.toggle('menu-open');
+    }
+  </script>
 </head>
 <body>
-  <header class="site-header">
-    <a href="index.html">
-      <img src="images/fml-logo.png" alt="Film Market Live Logo" class="site-logo" />
-    </a>
-    <img src="images/breaking-1.jpg" alt="Breaking Banner" class="breaking-banner" />
-  </header>
+  <!-- Slide-Out Menu -->
+  <nav class="side-nav">
+    <ul>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Deals</a></li>
+      <li><a href="#">Festivals</a></li>
+      <li><a href="#">Interviews</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Awards</a></li>
+      <li><a href="#">Trending</a></li>
+    </ul>
+  </nav>
+  <div class="nav-toggle" onclick="toggleMenu()">☰</div>
 
-  <div class="article-container">
-    <h1>Mooch Tries to Sell Mortgage-Backed Securities, But Can’t Get a Loan</h1>
-
-    <p><strong>NEW YORK, NY —</strong> In what critics are calling both “a bold satire of capitalism” and “a deeply flawed understanding of economics,” the lead character in the indie film <em>Mooch</em> attempts to offload mortgage-backed securities despite being unable to secure a basic home loan himself.</p>
-
-    <p>“The whole scene was inspired by watching one too many 2008 crash documentaries while broke,” said director Jeff Ryan, who confirmed the character doesn’t own property, collateral, or pants without holes.</p>
-
-    <blockquote>
-      “It’s not about actually owning the debt,” said Ryan. “It’s about selling the idea of the debt. That’s cinema.”
-    </blockquote>
-
-    <p>Sources close to the production say the character pitched his MBS bundle to a local bank using a printed PowerPoint and vibes alone. The bank manager reportedly replied, “I’m calling someone,” and left the room. He never returned.</p>
-
-    <p>Despite the financial rejection, the scene is being hailed by film school students as “post-economic realism.” Mooch, for his part, continues to live rent-free in both the narrative and his friend’s spare room.</p>
-
-    <div style="text-align:center; margin-top:30px;">
-      <a href="index.html" style="
-        background-color: #f73eff;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-      ">← Back to Home</a>
+  <!-- Main Site Content -->
+  <div id="main-content">
+    <div class="news-alert">
+      Go see 'MOOCH' Filmmakers Make Fools of themselves: June 8th, 4pm EST
+      <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator" target="_blank">Link Here</a>
     </div>
+
+    <header class="site-header">
+      <a href="index.html">
+        <img src="images/fml-logo.png" alt="Film Market Live Logo" class="site-logo" />
+      </a>
+      <img src="images/breaking-1.jpg" alt="Breaking Banner" class="breaking-banner" />
+    </header>
+
+    <main class="article-container">
+      <img src="images/trending-1.jpg" alt="Mooch Financial Trouble">
+      <h1>Mooch Tries to Sell Mortgage-Backed Securities, But Can't Get a Loan</h1>
+      <p><strong>WALL STREET —</strong> Mooch, the semi-fictional antihero of the Rejecta Film Festival's headline feature, attempted to enter the world of high finance this week — with predictably chaotic results.</p>
+
+      <p>In a now-viral video, Mooch is seen in an empty office lobby holding a whiteboard diagram labeled "Tranche Baby Tranche" and shouting, “These babies are AAA rated by the street!”</p>
+
+      <p>Unfortunately for Mooch, no actual bank, investor, or even friendly neighborhood bodega was willing to extend credit. “The paperwork was mostly napkins,” said one onlooker. “And one of the assets was a VHS of <em>Shark Tale</em>.”</p>
+
+      <p>While Mooch’s plan ultimately collapsed harder than the 2008 housing market, fans online praised the ambition. “It’s like The Big Short meets The Room,” wrote one user. “He didn’t understand CDOs, but he believed in them.”</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Film Market Live. All fake stories reserved.</p>
+      <a href="https://www.instagram.com/filmmarketlive/" target="_blank">
+        <img src="images/insta_logo_black.png" alt="Instagram">
+      </a>
+      <div style="margin-top: 15px;">
+        <a href="index.html" style="
+          background-color: var(--pink);
+          color: white;
+          padding: 8px 16px;
+          border-radius: 5px;
+          font-weight: bold;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 10px;">← Back to Home</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
