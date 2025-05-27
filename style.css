@@ -1,4 +1,4 @@
-/* Base Styles */
+/* ========== BASE STYLES ========== */
 :root {
     --pink: #f73eff;
     --gray: #f3f3f3;
@@ -19,6 +19,12 @@
   
   a:hover {
     text-decoration: underline;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
   
   .news-alert {
@@ -45,13 +51,11 @@
     border-bottom: 1px solid #ccc;
   }
   
-  .site-logo {
-    max-width: 300px;
-    height: auto;
-  }
-  
+  .site-logo,
   .breaking-banner {
     width: 100%;
+    height: auto;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
   }
@@ -93,11 +97,11 @@
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   .main-column {
-    flex: 0 1 65%;
+    flex: 0 1 66%;
   }
   
   .sidebar {
@@ -113,8 +117,9 @@
     background: #fff;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
+    position: relative;
   }
   
   .hero-story img,
@@ -122,15 +127,13 @@
   .side-story img {
     width: 100%;
     height: auto;
-    object-fit: contain;
-    max-width: 100%;
     border-radius: 4px;
-}
+  }
   
   .hero-story h1 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
-    margin: 10px 0;
+    margin: 20px 0 10px;
   }
   
   .feature-story h2,
@@ -139,15 +142,53 @@
     margin: 10px 0;
   }
   
+  .section-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: var(--pink);
+    padding: 4px 8px;
+    border-radius: 3px;
+  }
+  
+  .ad-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
   .ad-block img {
-    max-width: 100%;
-    width: 250px;
+    max-width: 250px;
     height: auto;
-    display: block;
-    margin: 0 auto;
     border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
+  }
+  
+  .trending-box {
+    background-color: #fff;
+    border-left: 4px solid var(--pink);
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .trending-box h4 {
+    color: var(--pink);
+    margin-top: 0;
+    font-weight: bold;
+  }
+  
+  .trending-box ul {
+    padding-left: 18px;
+    list-style-type: square;
+  }
+  
+  .trending-box li {
+    margin-bottom: 8px;
   }
   
   .carousel {
@@ -186,17 +227,6 @@
     color: var(--pink);
   }
   
-  .section-tag {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--pink);
-    padding: 4px 8px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-  }
-  
   .banner-break {
     margin: 40px auto;
     text-align: center;
@@ -215,12 +245,7 @@
     margin-top: 10px;
   }
   
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-  
+  /* ========== MOBILE OVERRIDES ========== */
   @media (max-width: 768px) {
     body {
       padding: 0;
@@ -241,19 +266,23 @@
       margin: 5px 0;
     }
   
+    .content-grid {
+      flex-direction: column;
+    }
+  
     .main-column,
     .sidebar {
       flex: 1 1 100%;
-    }
-  
-    .carousel-item {
-      width: 90%;
     }
   
     .hero-story h1,
     .feature-story h2,
     .side-story h3 {
       font-size: 1.4rem;
+    }
+  
+    .carousel-item {
+      width: 90%;
     }
   
     .carousel-item p {
@@ -264,7 +293,6 @@
       font-size: 12px;
       padding: 3px 6px;
       position: relative;
-      display: inline-block;
       margin-bottom: 10px;
     }
   
@@ -276,8 +304,8 @@
       width: 100%;
       max-width: 100%;
       height: auto;
-      display: block;
       margin: 0 auto;
+      object-fit: contain;
     }
   
     .ad-block img {
@@ -289,16 +317,4 @@
       font-size: 13px;
     }
   }
-  .hero-story img,
-.feature-story img,
-.side-story img,
-.breaking-banner,
-.site-logo {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-}
   
