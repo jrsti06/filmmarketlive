@@ -443,18 +443,6 @@
       <a href="cannes-footwear.html">Read Full Story →</a>
     </header>
 
-  <nav class="main-nav">
-    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
-    <ul id="nav-list">
-      <li><a href="#">News</a></li>
-      <li><a href="#">Deals</a></li>
-      <li><a href="#">Festivals</a></li>
-      <li><a href="#">Interviews</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#">Awards</a></li>
-      <li><a href="#">Trending</a></li>
-    </ul>
-  </nav>
 
   <main class="main-content">
     <div class="content-grid">
@@ -570,7 +558,8 @@
   </footer>
   <script>
     function toggleMenu() {
-      document.body.classList.toggle('menu-open');
+      document.querySelector('.side-nav').classList.toggle('active');
+      document.getElementById('main-content').classList.toggle('active');
     }
   </script>
 </body>
