@@ -51,7 +51,7 @@
       flex: 0 0 auto;
       scroll-snap-align: start;
       width: 320px;
-      height: 180px;
+      height: auto;
       background-color: white;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -133,6 +133,9 @@
     }
     .sidebar {
       flex: 1 1 30%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
     .hero-story,
     .feature-story,
@@ -150,6 +153,7 @@
       width: 100%;
       height: auto;
       margin-bottom: 10px;
+      border-radius: 4px;
     }
     .hero-story h1 {
       font-family: 'Playfair Display', serif;
@@ -160,9 +164,6 @@
     .side-story h3 {
       font-size: 1.2rem;
       margin: 10px 0;
-    }
-    .ad-block {
-      margin-bottom: 20px;
     }
     .trending-box {
       background-color: #f2f2f2;
@@ -234,7 +235,6 @@
       <li><a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator">Trending</a></li>
     </ul>
   </nav>
-
   <main class="main-content">
     <div class="content-grid">
       <div class="main-column">
@@ -245,7 +245,6 @@
           <p>A group of hopeless, hungry, and painfully self-aware filmmakers have done the unthinkable: turned rejection into red carpet glory with the creation of Rejecta Film Festival — a full-blown faux festival held directly across the street from Tribeca.</p>
           <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator">Read Full Story →</a>
         </article>
-
         <div class="carousel">
           <div class="carousel-item">
             <img src="images/trending-1.jpg" alt="Trending 1">
@@ -264,24 +263,21 @@
             <p><span>4 /</span> Festival Goer Finds Secret Photos of 'Mooch' Director</p>
           </div>
         </div>
-
         <article class="feature-story">
           <span class="section-tag">FILM</span>
-          <img src="images/mooch-poster.jpg" alt="Mooch Premiere">
+          <img src="images/mooch-poster.jpg" alt="Mooch Poster">
           <h2>'Mooch' Set to Premiere at Rejecta — Sources Call It a Cry for Help in Feature Film Form</h2>
           <p>Described by its creators as "a chaotic blend of emo, ego, and existential dread," Mooch will make its world debut at Rejecta, likely in front of an audience of confused tourists and emotionally exhausted filmmakers.</p>
           <img src="images/mooch-2.png" alt="Mooch Still">
           <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator">View Article →</a>
         </article>
-
         <aside class="side-story">
           <span class="section-tag">FILM</span>
-          <img src="images/bowling.jpg" alt="Mooch Cast Bowling">
+          <img src="images/bowling.jpg" alt="Mooch Bowling">
           <h3>'Mooch' Wins Miss Congeniality at IFFBoston's Bowling Night</h3>
           <p>While the film walked away from the Boston premiere without any major prizes, the Mooch cast dominated the afterparty bowling lane — and left with the coveted Miss Congeniality award (spray-painted on a spare pin).</p>
           <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator">More →</a>
         </aside>
-
         <article class="feature-story">
           <span class="section-tag">FILM</span>
           <img src="images/steve.jpg" alt="Steve Carell">
@@ -291,13 +287,12 @@
           <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator">Full Breakdown →</a>
         </article>
       </div>
-
       <aside class="sidebar">
         <div class="ad-block">
-          <img src="images/travel-baby.png" alt="Fake Ad 1">
+          <img src="images/travel-baby.png" alt="Ad 1">
         </div>
         <div class="ad-block">
-          <img src="images/bounce-back.png" alt="Fake Ad 2">
+          <img src="images/bounce-back.png" alt="Ad 2">
         </div>
         <div class="ad-block">
           <img src="images/filthy.jpg" alt="Ad 3">
@@ -310,12 +305,10 @@
         </div>
       </aside>
     </div>
-
     <div class="banner-break">
       <img src="images/mooch-tape.pdf" alt="Mooch Banner Tape">
     </div>
   </main>
-
   <footer>
     <p>&copy; 2025 Film Market Live. All fake stories reserved.</p>
     <a href="https://www.instagram.com/filmmarketlive/" target="_blank">
