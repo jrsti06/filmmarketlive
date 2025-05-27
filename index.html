@@ -122,23 +122,35 @@
       margin-bottom: 20px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       border-radius: 5px;
+      position: relative;
     }
 
     .hero-story img,
     .feature-story img,
     .side-story img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       max-height: 600px;
       object-fit: cover;
-      margin-bottom: 10px;
       border-radius: 4px;
+    }
+
+    .section-tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      background-color: var(--pink);
+      padding: 4px 8px;
+      border-radius: 3px;
     }
 
     .hero-story h1 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
-      margin: 10px 0;
+      margin: 20px 0 10px;
     }
 
     .feature-story h2,
@@ -159,6 +171,29 @@
       border-radius: 5px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       border: 1px solid #ddd;
+    }
+
+    .trending-box {
+      background-color: #fff;
+      border-left: 4px solid var(--pink);
+      padding: 15px;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .trending-box h4 {
+      color: var(--pink);
+      margin-top: 0;
+      font-weight: bold;
+    }
+
+    .trending-box ul {
+      padding-left: 18px;
+      list-style-type: square;
+    }
+
+    .trending-box li {
+      margin-bottom: 8px;
     }
 
     .carousel {
@@ -195,17 +230,6 @@
 
     .carousel-item p span {
       color: var(--pink);
-    }
-
-    .section-tag {
-      display: inline-block;
-      font-size: 14px;
-      font-weight: bold;
-      color: white;
-      background-color: var(--pink);
-      padding: 4px 8px;
-      margin-bottom: 10px;
-      border-radius: 3px;
     }
 
     .banner-break {
@@ -332,6 +356,15 @@
         </div>
         <div class="ad-block">
           <img src="images/fuzzy.jpg" alt="Ad 5">
+        </div>
+        <div class="trending-box">
+          <h4>Trending</h4>
+          <ul>
+            <li><a href="#">BREAKING: Distribution Deal Signed on Napkin at Afterparty</a></li>
+            <li><a href="#">SXSW Programmer Secretly Loves Mooch, Can’t Admit It Publicly</a></li>
+            <li><a href="#">Actor Cast as Jeff Ryan in Unauthorized Biopic</a></li>
+            <li><a href="#">Rejecta to Launch NFT Marketplace, Immediately Regrets It</a></li>
+          </ul>
         </div>
       </aside>
     </div>
