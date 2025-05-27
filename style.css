@@ -504,15 +504,11 @@ body.menu-open #main-content {
   }
 }
 /* Fade animation */
-body {
+body.fade-transition {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
 
 body.fade-in {
   opacity: 1;
-}
-
-body.fade-out {
-  opacity: 0;
 }
