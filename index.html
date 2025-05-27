@@ -415,6 +415,29 @@
       }
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("fade-in");
+  
+      // Link click fade-out
+      document.querySelectorAll("a").forEach(link => {
+        if (
+          link.hostname === location.hostname &&
+          !link.hasAttribute("target") &&
+          !link.href.includes("#")
+        ) {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.body.classList.remove("fade-in");
+            document.body.classList.add("fade-out");
+            setTimeout(() => {
+              window.location = link.href;
+            }, 400); // Match transition time
+          });
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <!-- Slide-Out Side Menu -->

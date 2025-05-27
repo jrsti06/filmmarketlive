@@ -503,3 +503,16 @@ body.menu-open #main-content {
     display: block;
   }
 }
+/* Fade animation */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+body.fade-out {
+  opacity: 0;
+}
