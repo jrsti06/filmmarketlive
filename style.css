@@ -45,3 +45,134 @@ body {
   .main-nav a:hover {
     color: #f73eff; /* Your established pink */
   }
+  .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .hero-story {
+    flex: 1 1 100%;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .hero-story img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .hero-story h1 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+  
+  .hero-story a {
+    color: #f73eff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .feature-story,
+  .side-story {
+    flex: 1 1 48%;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .feature-story img,
+  .side-story img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .feature-story h2,
+  .side-story h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .feature-story a,
+  .side-story a {
+    color: #f73eff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Mobile stacking */
+  @media (max-width: 768px) {
+    .feature-story, .side-story {
+      flex: 1 1 100%;
+    }
+  }
+  .content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .main-column {
+    flex: 1 1 65%;
+  }
+  
+  .sidebar {
+    flex: 1 1 30%;
+  }
+  
+  .ad-block {
+    margin-bottom: 20px;
+  }
+  
+  .ad-block img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+  }
+  
+  .trending-box {
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-left: 5px solid #f73eff;
+    margin-bottom: 20px;
+  }
+  
+  .trending-box h4 {
+    font-family: 'Higher Jump', sans-serif;
+    margin-top: 0;
+  }
+  
+  .trending-box ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .trending-box li {
+    margin-bottom: 10px;
+  }
+  
+  .trending-box a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .trending-box a:hover {
+    color: #f73eff;
+  }
+  
+  @media (max-width: 768px) {
+    .content-grid {
+      flex-direction: column;
+    }
+  
+    .main-column,
+    .sidebar {
+      flex: 1 1 100%;
+    }
+  }
