@@ -111,7 +111,23 @@
   </script>
 </head>
 <body>
-  <nav class="side-nav">
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav">
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <div class="side-nav" id="sideNav">
+      <ul>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">Festivals</a></li>
+        <li><a href="#">Interviews</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Awards</a></li>
+        <li><a href="#">Trending</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- DESKTOP NAV -->
+  <nav class="desktop-nav">
     <ul>
       <li><a href="#">News</a></li>
       <li><a href="#">Deals</a></li>
@@ -558,8 +574,7 @@
   </footer>
   <script>
     function toggleMenu() {
-      document.querySelector('.side-nav').classList.toggle('active');
-      document.getElementById('main-content').classList.toggle('active');
+      document.getElementById('sideNav').classList.toggle('active');
     }
   </script>
 </body>
