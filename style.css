@@ -16,3 +16,32 @@ body {
     max-width: 300px;
     height: auto;
   }
+  .main-nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .main-nav li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #f73eff; /* Your established pink */
+  }
