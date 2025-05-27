@@ -3,13 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Secret Photos of 'Mooch' Director</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Director Admits He Was Just Tired</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+    }
+    .article-container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #000;
+      margin-bottom: 20px;
+    }
+    .article-container p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .article-container img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
+  <div class="nav-toggle" onclick="toggleMenu()">☰</div>
   <nav class="side-nav">
-    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
     <ul>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#">News</a></li>
       <li><a href="#">Deals</a></li>
       <li><a href="#">Festivals</a></li>
@@ -27,25 +57,35 @@
       </a>
     </header>
 
-    <main class="main-content">
-      <article class="hero-story">
-        <span class="section-tag">FILM</span>
-        <img src="images/trending-4.jpg" alt="Secret Mooch Director">
-        <h1>Festival Goer Finds Secret Photos of 'Mooch' Director</h1>
-        <p><strong>NEW YORK, NY —</strong> During the Rejecta Film Festival, one curious attendee discovered an unmarked envelope sitting beneath their folding chair. Inside were dozens of personal photos of <em>Mooch</em> director Jeff Ryan — some mid-bite, others mid-cry.</p>
-        <p>“It was like opening a door into someone’s emotional fridge,” said the finder, who has since uploaded the images to a fan-run Discord called <em>The Mooch Files</em>.</p>
-        <p>Ryan has not commented publicly, but was seen the next morning nervously checking under every chair in the venue.</p>
-      </article>
-    </main>
+    <div class="article-container">
+      <img src="images/director-tired.jpg" alt="Director Tired Image">
+      <h1>Director Says Film Was Inspired by a Dream, Then Admits He Was Just Tired</h1>
+      <p><strong>LOS ANGELES, CA —</strong> During a recent panel Q&A at the Not Cannes Film Salon (held in a strip mall yoga studio), filmmaker Jeff Ryan stunned attendees by revealing the source of inspiration behind his latest feature film, <em>Mooch</em>.</p>
+
+      <p>“I told everyone it came to me in a dream,” Ryan admitted while sipping from a lukewarm La Croix. “But honestly, I hadn’t slept in like three days. I think I just saw a Wawa sign and got emotional.”</p>
+
+      <p>Despite the anti-climactic revelation, fans remain supportive. “It actually makes the movie better,” said one festival-goer. “Knowing the hallucinations were real brings a layer of... truth?”</p>
+
+      <p>As for future projects, Ryan shared that he plans to stay up for four days straight next time in hopes of achieving a full-blown cinematic breakdown — or at least a tight 75-minute dramedy.</p>
+
+      <div style="text-align:center; margin-top: 40px;">
+        <a href="index.html" style="
+          background-color: #f73eff;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-weight: bold;
+          text-decoration: none;">
+          ← Back to Home
+        </a>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2025 Film Market Live. All fake stories reserved.</p>
       <a href="https://www.instagram.com/filmmarketlive/" target="_blank">
         <img src="images/insta_logo_black.png" alt="Instagram">
       </a>
-      <div style="margin-top: 15px;">
-        <a href="index.html" class="home-button">← Back to Home</a>
-      </div>
     </footer>
   </div>
 

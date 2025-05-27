@@ -1,79 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paparazzi Mistake</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .article-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-      font-family: 'Roboto', sans-serif;
-    }
-    .article-container h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #000;
-      margin-bottom: 20px;
-    }
-    .article-container p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    .article-container blockquote {
-      font-style: italic;
-      margin: 20px 0;
-      padding-left: 20px;
-      border-left: 4px solid #f73eff;
-      color: #555;
-    }
-    .article-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .back-button {
-      background-color: #f73eff;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paparazzi Mix-Up</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="article-container">
-    <img src="images/temp-story-image.jpg" alt="Paparazzi Confusion">
-    <h1>Paparazzi Mistakes Jeff Ryan for Robert Pattinson — “Ugly Photos Clarified Ryan”</h1>
+  <nav class="side-nav">
+    <ul>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Deals</a></li>
+      <li><a href="#">Festivals</a></li>
+      <li><a href="#">Interviews</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Awards</a></li>
+      <li><a href="#">Trending</a></li>
+    </ul>
+  </nav>
+  <div class="nav-toggle" onclick="toggleMenu()">☰</div>
 
-    <p><strong>LOS ANGELES, CA —</strong> In a now-viral moment outside a screening of <em>Mooch</em>, local paparazzi swarmed indie filmmaker Jeff Ryan, mistakenly identifying him as Twilight star Robert Pattinson.</p>
+  <div id="main-content">
+    <header class="site-header">
+      <a href="index.html">
+        <img src="images/fml-logo.png" alt="Film Market Live Logo" class="site-logo" />
+      </a>
+    </header>
 
-    <p>Wearing a hoodie, shades, and what can only be described as “post-ironic despair,” Ryan posed for the cameras before realizing the error.</p>
+    <div class="article-container">
+      <img src="images/trending-3.jpg" alt="Paparazzi Confusion" style="width:100%; border-radius:5px; margin-bottom:20px;" />
+      <h1>Paparazzi Mistake Jeff Ryan for Robert Pattinson — "Ugly Photos Clarified Identity," Say Sources</h1>
 
-    <blockquote>
-      “They kept yelling ‘Rob! ROB!’ and I thought… sure, maybe I am today,” said Ryan.
-    </blockquote>
+      <p><strong>HOLLYWOOD, CA —</strong> A flash mob of paparazzi at a West Hollywood smoothie stand briefly caused a stir after misidentifying indie filmmaker Jeff Ryan as Twilight star Robert Pattinson.
+      </p>
 
-    <p>The truth unraveled moments later when a high-resolution flash revealed Ryan’s true identity — and the crowd slowly began to disperse.</p>
+      <p>The chaos erupted when Ryan exited a 2004 Toyota Prius in oversized sunglasses and a hoodie that read <em>"Emo Forever."</em> Cameras clicked. Voices screamed. "Rob! ROB!"
+      </p>
 
-    <p>“I just thought Pattinson had fallen on hard times,” one photographer admitted. “The light hit him wrong and it was like, ‘Wait, who the hell is this guy?’”</p>
+      <blockquote>
+        "I thought I was finally famous," Ryan said. "Turns out, they just hadn’t seen my chin clearly."
+      </blockquote>
 
-    <p>Ryan has since updated his IMDb headshot with one of the photos from the incident and is reportedly developing a short called <em>“Walmart Pattinson: A Tragedy.”</em></p>
+      <p>Within moments, a particularly high-resolution image of Ryan tripping over a sandwich board made its way to TMZ. The caption: <em>“Definitely Not Pattinson.”</em>
+      </p>
+
+      <p>Ryan has since updated his IMDb bio to include the phrase: "Often confused for Robert Pattinson in dim light."
+      </p>
+    </div>
 
     <footer>
-      <a class="back-button" href="index.html">← Back to Home</a>
+      <p>&copy; 2025 Film Market Live. All fake stories reserved.</p>
+      <a href="index.html" class="home-button">← Back to Home</a>
     </footer>
   </div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.side-nav').classList.toggle('active');
+      document.getElementById('main-content').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
