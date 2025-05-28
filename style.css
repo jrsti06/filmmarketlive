@@ -545,3 +545,11 @@ footer img {
   flex-direction: column;
   gap: 20px;
 }
+.pink {
+  color: var(--pink);
+}
+a.black-link {
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
+}
