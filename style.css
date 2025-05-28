@@ -357,11 +357,11 @@
   
     .main-nav li {
       display: block;
-      margin: 8px 0;
+      margin: 10px 0;
     }
   
     .main-nav a {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
   /* Side menu styles */
@@ -385,7 +385,7 @@
 }
 
 .side-nav li {
-  padding: 15px 20px;
+  padding: 25px 20px;    /* More top-bottom padding */
   border-bottom: 1px solid #eee;
 }
 
@@ -393,6 +393,8 @@
   color: #000;
   text-decoration: none;
   font-weight: bold;
+  font-size: 20px;       /* Increase font size */
+  line-height: 1.6;      /* Optional: more vertical breathing room */
 }
 
 .side-nav .nav-toggle {
@@ -406,6 +408,10 @@
   border-radius: 4px;
   cursor: pointer;
   z-index: 1100;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Shift content when menu is open */
