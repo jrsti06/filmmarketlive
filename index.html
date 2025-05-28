@@ -291,22 +291,32 @@
   </style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.add("fade-transition", "fade-in");
+    document.body.classList.add("fade-in");
 
     document.querySelectorAll("a").forEach(link => {
-      if (
-        link.hostname === location.hostname &&
-        !link.hasAttribute("target") &&
-        !link.href.includes("#")
-      ) {
+      const isSameSite = link.hostname === location.hostname;
+      const isNotAnchor = !link.href.includes("#");
+      const isNotNewTab = !link.hasAttribute("target");
+
+      if (isSameSite && isNotAnchor && isNotNewTab) {
         link.addEventListener("click", function (e) {
           e.preventDefault();
-          history.pushState(null, null, link.href); // 👈 Adds browser history step
+          const href = this.href;
           document.body.classList.remove("fade-in");
+          document.body.classList.add("fade-out");
+
           setTimeout(() => {
-            window.location.href = link.href;
-          }, 300);
+            window.location.href = href;
+          }, 300); // match your CSS transition time
         });
+      }
+    });
+
+    // Optional: ensure forward/back navigation also shows fade-in
+    window.addEventListener("pageshow", function (event) {
+      if (event.persisted) {
+        document.body.classList.remove("fade-out");
+        document.body.classList.add("fade-in");
       }
     });
   });
@@ -449,11 +459,11 @@
   </div>
 </footer>
 </div>
-  <script>
-    function toggleMenu() {
-      document.getElementById('sideNav').classList.toggle('active');
-    }
-  </script>
+<script>
+  function toggleMenu() {
+    document.querySelector('.side-nav').classList.toggle('active');
+  }
+</script>
   <script>
     fetch("sidebar.html")
       .then(response => response.text())

@@ -599,3 +599,15 @@ a.read-more {
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
 }
+body.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
