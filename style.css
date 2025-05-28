@@ -566,10 +566,3 @@ a.black-link {
   font-family: 'Playfair Display', serif;
   color: #000;
 }
-.hero-story h1,
-.feature-story h2,
-.side-story h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #000;
-}
