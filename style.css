@@ -570,3 +570,21 @@ a.read-more {
   color: var(--pink);
   font-weight: bold;
 }
+.hero-story h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #000;
+  margin: 20px 0 10px;
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--pink);
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
