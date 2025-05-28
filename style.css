@@ -566,3 +566,7 @@ a.black-link {
   font-family: 'Playfair Display', serif;
   color: #000;
 }
+a.read-more {
+  color: var(--pink);
+  font-weight: bold;
+}
