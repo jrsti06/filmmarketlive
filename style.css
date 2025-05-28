@@ -51,6 +51,11 @@
     text-align: center;
     border-bottom: 1px solid #ccc;
   }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+  }
   
   .site-logo {
     max-width: 300px;
@@ -559,5 +564,12 @@ a.black-link {
 .feature-story h2,
 .side-story h3 {
   font-family: 'Playfair Display', serif;
+  color: #000;
+}
+.hero-story h1,
+.feature-story h2,
+.side-story h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
   color: #000;
 }
