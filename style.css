@@ -214,13 +214,15 @@
   }
   
   .carousel-item p {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 14px;
     padding: 10px;
+    color: #000;
   }
   
   .carousel-item p span {
     color: var(--pink);
+    font-weight: bold;
   }
   
   .banner-break {
@@ -552,4 +554,10 @@ a.black-link {
   color: #000;
   font-weight: normal;
   text-decoration: none;
+}
+.hero-story h1,
+.feature-story h2,
+.side-story h3 {
+  font-family: 'Playfair Display', serif;
+  color: #000;
 }
