@@ -44,17 +44,17 @@
     margin-left: 10px;
     border-radius: 4px;
   }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #000;
+  }
   
   .site-header {
     background-color: #ffffff;
     padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid #ccc;
-  }
-
-  h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    color: #000;
   }
   
   .site-logo {
