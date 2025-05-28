@@ -301,10 +301,11 @@
       ) {
         link.addEventListener("click", function (e) {
           e.preventDefault();
+          history.pushState(null, null, link.href); // 👈 Adds browser history step
           document.body.classList.remove("fade-in");
           setTimeout(() => {
-            window.location = link.href;
-          }, 300); // Match transition duration
+            window.location.href = link.href;
+          }, 300);
         });
       }
     });
