@@ -129,7 +129,12 @@
       ">← Back to Home</a>
     </div>
   </footer>
-  
-  </div>
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
+  </script>
 </body>
 </html>

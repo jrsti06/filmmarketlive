@@ -41,7 +41,13 @@
         <p>Ryan has not commented publicly, but was seen the next morning nervously checking under every chair in the venue.</p>
         <img src="images/leaked-3.jpg" alt="Ryan Leaked 3">
       </article>
-    </main>
+    </div>
+</div>
+
+<!-- Sidebar Column -->
+<aside class="sidebar" id="sidebar-container"></aside>
+</div>
+</main>
     <footer style="
     width: 100%;
     background-color: #111;
@@ -75,6 +81,13 @@
       document.querySelector('.side-nav').classList.toggle('active');
       document.getElementById('main-content').classList.toggle('active');
     }
+  </script>
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
   </script>
 </body>
 </html>
