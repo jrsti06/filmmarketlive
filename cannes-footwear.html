@@ -7,6 +7,7 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
+  <div id="global-header"></div>
   <div class="news-alert">
     Go see 'MOOCH' Filmmakers Make Fools of themselves: June 8th, 4pm EST
     <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator" target="_blank">Link Here</a>
@@ -100,6 +101,12 @@
     .then(response => response.text())
     .then(data => {
       document.getElementById("sidebar-container").innerHTML = data;
+    });
+
+  fetch("global-header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("global-header").innerHTML = data;
     });
 </script>
 </body>

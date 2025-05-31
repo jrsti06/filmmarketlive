@@ -481,13 +481,19 @@
     document.querySelector('.side-nav').classList.toggle('active');
   }
 </script>
-  <script>
-    fetch("sidebar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("sidebar-container").innerHTML = data;
-      });
-  </script>
+<script>
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    });
+
+  fetch("global-header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("global-header").innerHTML = data;
+    });
+</script>
   <script>
     const banner = document.getElementById("rotating-banner");
     let showingA = true;

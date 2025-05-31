@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div id="global-header"></div>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paparazzi Mistake Jeff Ryan for Pattinson</title>
@@ -123,11 +124,17 @@
   </div>
 </footer>
 <script>
-    fetch("sidebar.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("sidebar-container").innerHTML = data;
-      });
-  </script>
+  fetch("sidebar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("sidebar-container").innerHTML = data;
+    });
+
+  fetch("global-header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("global-header").innerHTML = data;
+    });
+</script>
 </body>
 </html>

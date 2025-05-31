@@ -69,6 +69,23 @@ a.read-more:hover {
     max-width: 300px;
     margin: 0 auto;
   }
+
+  .promo-banner {
+    width: 100%;
+    background-color: #f73eff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .promo-banner a {
+    color: white;
+    text-decoration: none;
+  }
+  .promo-banner a:hover {
+    text-decoration: underline;
+  }
   
   .breaking-banner {
     width: 100%;
