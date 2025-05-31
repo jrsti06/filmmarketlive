@@ -404,6 +404,10 @@
           </div>
         </div>
 
+        <div class="secondary-banner">
+          <img id="rotating-banner" src="images/banner-2a.jpg" alt="Ad Banner">
+        </div>
+
         <article class="hero-story">
           <span class="section-tag">FILM</span>
           <img src="images/rejecta-jury.jpg" alt="Rejecta Film Festival Jury">
@@ -483,6 +487,15 @@
       .then(data => {
         document.getElementById("sidebar-container").innerHTML = data;
       });
+  </script>
+  <script>
+    const banner = document.getElementById("rotating-banner");
+    let showingA = true;
+  
+    setInterval(() => {
+      banner.src = showingA ? "images/banner-2b.jpg" : "images/banner-2a.jpg";
+      showingA = !showingA;
+    }, 2000); // Switch every 2 seconds
   </script>
 </body>
 </html>
