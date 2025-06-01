@@ -18,12 +18,39 @@
 
   <title>Rejecta Jury — Film Market Live</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .jury-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 20px;
+    }
+    .jury-carousel img {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .hero-story img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .hero-story h1 {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <a href="index.html">
       <img src="images/fml-logo.png" alt="Film Market Live Logo" class="site-logo" />
     </a>
+    <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator">
+      <img src="images/devil-stare.gif" alt="Breaking Banner" class="breaking-banner" />
+    </a>
+    <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator" class="read-more">NOT SPAM →</a>
   </header>
 
   <main class="main-content">
@@ -34,48 +61,14 @@
       <p>The inaugural Rejecta Film Festival has unveiled its full lineup of jury members — a group of cinematic disruptors, emo auteurs, and reluctant tastemakers brave enough to judge films rejected by everyone else.</p>
     </article>
 
-    <div class="feature-story">
-      <h2>🏆 Grand Jury Prize</h2>
-      <p><strong>Aaron Katz & Adam Maffei</strong><br>
-      For the film that made us feel the most things. Like, emotionally. Maybe physically? Hard to say.</p>
-    </div>
-
-    <div class="feature-story">
-      <h2>🎖️ Special Jury Prize</h2>
-      <p><strong>Kyra Gardner, Addison Heimann, Elise Finnerty</strong><br>
-      For something we can’t quite explain — but loved anyway. The vibes were immaculate.</p>
-    </div>
-
-    <div class="feature-story">
-      <h2>🎬 Best Director</h2>
-      <p><strong>Tristan Scott-Behrends</strong><br>
-      For bringing a bold vision to every painful, exhausting, beautiful day on set. You deserve an actual career. We mean that.</p>
-    </div>
-
-    <div class="feature-story">
-      <h2>🎭 Best Lead Performance</h2>
-      <p><strong>Matt Perusse & Sarah J. Mann</strong><br>
-      (Gender-neutral category)<br>
-      For the actors who *really went for it* — and made us believe it.</p>
-    </div>
-
-    <div class="feature-story">
-      <h2>✍️ Best Screenplay</h2>
-      <p><strong>Jackson Murray</strong><br>
-      For writing that either felt improvised or brilliant (or both). Lines that live rent-free in our minds.</p>
-    </div>
-
-    <div class="feature-story">
-      <h2>💡 Innovation + Pure Brilliance</h2>
-      <p><strong>Anonymous*</strong><br>
-      (*they didn’t want to be publicly associated with Jeff Ryan)<br>
-      For ideas that defy logic and possibly legality. We love you anyway.</p>
-    </div>
-
-    <div class="feature-story">
-      <h2>🔥 Spirit of Rejecta</h2>
-      <p><strong>Peter Nogueira</strong><br>
-      Awarded to the film that best embodies our festival’s core tenets: rebellion, DIY chaos, and a total lack of adult supervision.</p>
+    <div class="jury-carousel">
+      <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize">
+      <img src="images/Special Jury 2.jpeg" alt="Special Jury Prize">
+      <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director">
+      <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance">
+      <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay">
+      <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta">
+      <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance">
     </div>
 
     <p style="margin-top: 40px;">
@@ -89,13 +82,14 @@
       <img src="images/insta_logo_white.png" alt="Instagram">
     </a>
   </footer>
+
   <script>
     fetch("sidebar.html")
       .then(response => response.text())
       .then(data => {
         document.getElementById("sidebar-container").innerHTML = data;
       });
-  
+
     fetch("global-header.html")
       .then(response => response.text())
       .then(data => {
