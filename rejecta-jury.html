@@ -75,7 +75,13 @@
     <img id="lightbox-img" class="modal-content" src="">
     <span class="carousel-arrow right" onclick="navigateLightbox(1)">&#10095;</span>
   </div>
-
+  <script>
+    fetch("sidebar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
+  </script>
   <script>
     const images = [
       "images/Offiial Jury 1.001.jpeg",
