@@ -8,9 +8,19 @@ A quick and clean reference for backing up your site using Git & GitHub.
 
 ```bash
 git init                                      # Initialize Git in the folder
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git remote add origin https://github.com/jrsti06/filmmarketlive.git
 git branch -M main                           # Rename default branch to 'main'
 ```
+MY TWO GIT REMOTE OPTIONS (JR)
+
+A -- Searching for what REMOTE URL:
+git remote -v
+
+BACKUP
+git remote set-url origin https://github.com/jrsti06/jr-backups.git
+
+ORIGINAL
+git remote set-url origin https://github.com/jrsti06/filmmarketlive.git
 
 ---
 
