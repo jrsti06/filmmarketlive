@@ -4,8 +4,6 @@
   <div id="global-header"></div>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Social Preview Meta Tags -->
   <meta property="og:title" content="Rejecta Film Festival Announces Its First-Ever Jury">
   <meta property="og:description" content="From Grand Jury Prize to Spirit of Rejecta, the fake fest now has real awards.">
   <meta property="og:image" content="https://www.filmmarketlive.com/images/rejecta-jury.jpg">
@@ -15,139 +13,8 @@
   <meta name="twitter:title" content="Rejecta Film Festival Announces Its First-Ever Jury">
   <meta name="twitter:description" content="From Grand Jury Prize to Spirit of Rejecta, the fake fest now has real awards.">
   <meta name="twitter:image" content="https://www.filmmarketlive.com/images/rejecta-jury.jpg">
-
   <title>Rejecta Jury — Film Market Live</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .jury-carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .jury-carousel img {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      padding-top: 60px;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.9);
-    }
-
-    .modal-content {
-      margin: auto;
-      display: block;
-      max-width: 90%;
-      max-height: 90vh;
-      height: auto;
-      width: auto;
-      border-radius: 8px;
-      object-fit: contain;
-    }
-
-    .carousel-wrapper {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .jury-carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .jury-carousel img {
-      flex: 0 0 auto;
-      max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-      scroll-snap-align: start;
-    }
-
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #111;
-      color: white;
-      font-size: 24px;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      z-index: 10;
-      opacity: 0.7;
-      transition: opacity 0.3s;
-    }
-
-    .carousel-arrow:hover {
-      opacity: 1;
-    }
-
-    .carousel-arrow.left {
-      left: 0;
-    }
-
-    .carousel-arrow.right {
-      right: 0;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 30px;
-      right: 35px;
-      color: #fff;
-      font-size: 40px;
-      font-weight: bold;
-      cursor: pointer;
-      z-index: 10000;
-    }
-
-    .close-btn:hover {
-      color: #f73eff;
-    }
-
-    .hero-story img {
-      max-width: 100%;
-      border-radius: 5px;
-    }
-
-    .hero-story h1 {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .main-content {
-      display: flex;
-      gap: 40px;
-      align-items: flex-start;
-    }
-
-    .main-column {
-      flex: 0 1 66%;
-    }
-
-    .sidebar {
-      flex: 0 1 30%;
-    }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -167,24 +34,21 @@
         <img src="images/rejecta-jury.jpg" alt="Rejecta Film Festival Jury">
         <h1>Rejecta Film Festival Announces Its First-Ever Jury</h1>
         <p>The inaugural Rejecta Film Festival has unveiled its full lineup of jury members — a group of cinematic disruptors, emo auteurs, and reluctant tastemakers brave enough to judge films rejected by everyone else.</p>
-
         <p>A group of talented filmmakers have agreed — still awaiting confirmation of their official legal consent to this panel — to partake in the jury deliberation of a set of classic awards. The seemingly confusing part of this jury award process is that the Rejecta Film Festival is only screening one film at the time of this article? Can we expect a sweep for the MOOCH film crew? Or will the Rejects fail to hit a home run when the ball is teed up for them five feet away from the fence?</p>
       </article>
 
       <div class="carousel-wrapper">
-        <button class="carousel-arrow left">&#10094;</button> <!-- Left Arrow -->
-        
+        <button class="carousel-arrow left">&#10094;</button>
         <div class="jury-carousel" id="jury-carousel">
-          <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize" onclick="openModal(this)">
-          <img src="images/Special Jury 2.jpg" alt="Special Jury Prize" onclick="openModal(this)">
-          <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director" onclick="openModal(this)">
-          <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance" onclick="openModal(this)">
-          <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay" onclick="openModal(this)">
-          <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta" onclick="openModal(this)">
-          <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance" onclick="openModal(this)">
+          <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize" onclick="openLightbox(0)">
+          <img src="images/Special Jury 2.jpg" alt="Special Jury Prize" onclick="openLightbox(1)">
+          <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director" onclick="openLightbox(2)">
+          <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance" onclick="openLightbox(3)">
+          <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay" onclick="openLightbox(4)">
+          <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta" onclick="openLightbox(5)">
+          <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance" onclick="openLightbox(6)">
         </div>
-      
-        <button class="carousel-arrow right">&#10095;</button> <!-- Right Arrow -->
+        <button class="carousel-arrow right">&#10095;</button>
       </div>
 
       <p style="margin-top: 40px;">
@@ -194,8 +58,6 @@
         RSVP to Screening →
       </a>
     </div>
-
-    <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebar-container"></aside>
   </main>
 
@@ -206,7 +68,48 @@
     </a>
   </footer>
 
+  <div id="lightbox-modal" class="modal">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <span class="carousel-arrow left" onclick="navigateLightbox(-1)">&#10094;</span>
+    <img id="lightbox-img" class="modal-content" src="">
+    <span class="carousel-arrow right" onclick="navigateLightbox(1)">&#10095;</span>
+  </div>
+
   <script>
+    const images = [
+      "images/Offiial Jury 1.001.jpeg",
+      "images/Special Jury 2.jpg",
+      "images/Offiial Jury 1.003.jpeg",
+      "images/Best Lead 2.jpeg",
+      "images/Offiial Jury 1.005.jpeg",
+      "images/Official Jury .001.jpeg",
+      "images/Anonymous.001.jpeg"
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      document.getElementById('lightbox-modal').style.display = 'block';
+      document.getElementById('lightbox-img').src = images[index];
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').style.display = 'none';
+    }
+
+    function navigateLightbox(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      document.getElementById('lightbox-img').src = images[currentIndex];
+    }
+
+    const carousel = document.getElementById('jury-carousel');
+    document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
+      carousel.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+    document.querySelector('.carousel-arrow.right').addEventListener('click', () => {
+      carousel.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+
     fetch("sidebar.html")
       .then(response => response.text())
       .then(data => {
@@ -219,43 +122,5 @@
         document.getElementById("global-header").innerHTML = data;
       });
   </script>
- <!-- Lightbox Modal -->
-<div id="lightbox-modal" style="display: none;">
-  <span class="lightbox-close" onclick="closeLightbox()">×</span>
-  <img id="lightbox-img" src="" alt="Jury Image">
-  <span class="lightbox-nav left" onclick="navigateLightbox(-1)">❮</span>
-  <span class="lightbox-nav right" onclick="navigateLightbox(1)">❯</span>
-</div>
-<script>
-  function openModal(img) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = img.src;
-  }
-
-  function closeModal(event) {
-    if (
-      event.target.id === "imageModal" || 
-      event.target.classList.contains("close-btn")
-    ) {
-      document.getElementById("imageModal").style.display = "none";
-    }
-  }
-</script>
-
-<script>
-  const carousel = document.getElementById('jury-carousel');
-  const leftBtn = document.querySelector('.carousel-arrow.left');
-  const rightBtn = document.querySelector('.carousel-arrow.right');
-
-  leftBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: -320, behavior: 'smooth' });
-  });
-
-  rightBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: 320, behavior: 'smooth' });
-  });
-</script>
 </body>
 </html>
