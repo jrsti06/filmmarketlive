@@ -241,5 +241,18 @@
     }
   }
 </script>
+<script>
+  const carousel = document.getElementById('jury-carousel');
+  const leftBtn = document.querySelector('.carousel-arrow.left');
+  const rightBtn = document.querySelector('.carousel-arrow.right');
+
+  leftBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
