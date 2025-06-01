@@ -26,19 +26,37 @@
       gap: 20px;
       padding: 20px;
     }
+
     .jury-carousel img {
       flex: 0 0 auto;
       scroll-snap-align: start;
       max-width: 300px;
       height: auto;
       border-radius: 8px;
+      background: #fff;
     }
+
     .hero-story img {
       max-width: 100%;
       border-radius: 5px;
     }
+
     .hero-story h1 {
       font-family: 'Playfair Display', serif;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    .main-column {
+      flex: 0 1 66%;
+    }
+
+    .sidebar {
+      flex: 0 1 30%;
     }
   </style>
 </head>
@@ -54,26 +72,36 @@
   </header>
 
   <main class="main-content">
-    <article class="hero-story">
-      <span class="section-tag">FESTIVAL</span>
-      <img src="images/rejecta-jury.jpg" alt="Rejecta Film Festival Jury">
-      <h1>Rejecta Film Festival Announces Its First-Ever Jury</h1>
-      <p>The inaugural Rejecta Film Festival has unveiled its full lineup of jury members — a group of cinematic disruptors, emo auteurs, and reluctant tastemakers brave enough to judge films rejected by everyone else.</p>
-    </article>
+    <div class="main-column">
+      <article class="hero-story">
+        <span class="section-tag">FESTIVAL</span>
+        <img src="images/rejecta-jury.jpg" alt="Rejecta Film Festival Jury">
+        <h1>Rejecta Film Festival Announces Its First-Ever Jury</h1>
+        <p>The inaugural Rejecta Film Festival has unveiled its full lineup of jury members — a group of cinematic disruptors, emo auteurs, and reluctant tastemakers brave enough to judge films rejected by everyone else.</p>
 
-    <div class="jury-carousel">
-      <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize">
-      <img src="images/Special Jury 2.jpeg" alt="Special Jury Prize">
-      <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director">
-      <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance">
-      <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay">
-      <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta">
-      <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance">
+        <p>A group of talented filmmakers have agreed — still awaiting confirmation of their official legal consent to this panel — to partake in the jury deliberation of a set of classic awards. The seemingly confusing part of this jury award process is that the Rejecta Film Festival is only screening one film at the time of this article? Can we expect a sweep for the MOOCH film crew? Or will the Rejects fail to hit a home run when the ball is teed up for them five feet away from the fence?</p>
+      </article>
+
+      <div class="jury-carousel">
+        <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize">
+        <img src="images/Special Jury 2.jpg" alt="Special Jury Prize">
+        <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director">
+        <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance">
+        <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay">
+        <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta">
+        <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance">
+      </div>
+
+      <p style="margin-top: 40px;">
+        <a href="index.html" style="color: var(--pink); font-weight: bold;">← Back to Homepage</a>
+      </p>
+      <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator" class="read-more" target="_blank">
+        RSVP to Screening →
+      </a>
     </div>
 
-    <p style="margin-top: 40px;">
-      <a href="index.html" style="color: var(--pink); font-weight: bold;">← Back to Homepage</a>
-    </p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar-container"></aside>
   </main>
 
   <footer>
