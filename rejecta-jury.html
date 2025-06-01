@@ -27,7 +27,7 @@
     <a href="https://www.eventbrite.com/e/rejecta-film-festival-mooch-screening-afterparty-tickets-1373860677269?aff=oddtdtcreator" class="read-more">NOT SPAM →</a>
   </header>
 
-  <main class="main-content">
+  <main class="main-content content-grid">
     <div class="main-column">
       <article class="hero-story">
         <span class="section-tag">FESTIVAL</span>
@@ -38,7 +38,7 @@
       </article>
 
       <div class="carousel-wrapper">
-        <button class="carousel-arrow left">&#10094;</button>
+        <button class="carousel-arrow left" onclick="navigateCarousel(-1)">&#10094;</button>
         <div class="jury-carousel" id="jury-carousel">
           <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize" onclick="openLightbox(0)">
           <img src="images/Special Jury 2.jpg" alt="Special Jury Prize" onclick="openLightbox(1)">
@@ -48,7 +48,7 @@
           <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta" onclick="openLightbox(5)">
           <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance" onclick="openLightbox(6)">
         </div>
-        <button class="carousel-arrow right">&#10095;</button>
+        <button class="carousel-arrow right" onclick="navigateCarousel(1)">&#10095;</button>
       </div>
 
       <p style="margin-top: 40px;">
@@ -58,6 +58,7 @@
         RSVP to Screening →
       </a>
     </div>
+
     <aside class="sidebar" id="sidebar-container"></aside>
   </main>
 
@@ -69,7 +70,7 @@
   </footer>
 
   <div id="lightbox-modal" class="modal">
-    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <span class="close-btn" onclick="closeLightbox()">×</span>
     <span class="carousel-arrow left" onclick="navigateLightbox(-1)">&#10094;</span>
     <img id="lightbox-img" class="modal-content" src="">
     <span class="carousel-arrow right" onclick="navigateLightbox(1)">&#10095;</span>
@@ -89,8 +90,8 @@
 
     function openLightbox(index) {
       currentIndex = index;
-      document.getElementById('lightbox-modal').style.display = 'block';
-      document.getElementById('lightbox-img').src = images[index];
+      document.getElementById('lightbox-modal').style.display = 'flex';
+      document.getElementById('lightbox-img').src = images[currentIndex];
     }
 
     function closeLightbox() {
@@ -102,13 +103,10 @@
       document.getElementById('lightbox-img').src = images[currentIndex];
     }
 
-    const carousel = document.getElementById('jury-carousel');
-    document.querySelector('.carousel-arrow.left').addEventListener('click', () => {
-      carousel.scrollBy({ left: -320, behavior: 'smooth' });
-    });
-    document.querySelector('.carousel-arrow.right').addEventListener('click', () => {
-      carousel.scrollBy({ left: 320, behavior: 'smooth' });
-    });
+    function navigateCarousel(direction) {
+      const carousel = document.getElementById('jury-carousel');
+      carousel.scrollBy({ left: direction * 320, behavior: 'smooth' });
+    }
 
     fetch("sidebar.html")
       .then(response => response.text())
