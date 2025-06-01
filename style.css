@@ -792,3 +792,13 @@ body.fade-out {
 .carousel-arrow.right {
   right: 0;
 }
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 9999;
+}
