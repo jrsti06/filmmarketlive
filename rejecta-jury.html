@@ -219,10 +219,12 @@
         document.getElementById("global-header").innerHTML = data;
       });
   </script>
-  <!-- MODAL VIEWER -->
-<div id="imageModal" class="modal" onclick="closeModal(event)">
-  <span class="close-btn" onclick="closeModal(event)">&times;</span>
-  <img class="modal-content" id="modalImg">
+ <!-- Lightbox Modal -->
+<div id="lightbox-modal" style="display: none;">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img" src="" alt="Jury Image">
+  <span class="lightbox-nav left" onclick="navigateLightbox(-1)">❮</span>
+  <span class="lightbox-nav right" onclick="navigateLightbox(1)">❯</span>
 </div>
 <script>
   function openModal(img) {
@@ -241,6 +243,7 @@
     }
   }
 </script>
+
 <script>
   const carousel = document.getElementById('jury-carousel');
   const leftBtn = document.querySelector('.carousel-arrow.left');
