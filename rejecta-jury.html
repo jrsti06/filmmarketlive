@@ -61,6 +61,55 @@
       object-fit: contain;
     }
 
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .jury-carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .jury-carousel img {
+      flex: 0 0 auto;
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+      scroll-snap-align: start;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #111;
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    .carousel-arrow:hover {
+      opacity: 1;
+    }
+
+    .carousel-arrow.left {
+      left: 0;
+    }
+
+    .carousel-arrow.right {
+      right: 0;
+    }
+
     .close-btn {
       position: absolute;
       top: 30px;
@@ -122,14 +171,20 @@
         <p>A group of talented filmmakers have agreed — still awaiting confirmation of their official legal consent to this panel — to partake in the jury deliberation of a set of classic awards. The seemingly confusing part of this jury award process is that the Rejecta Film Festival is only screening one film at the time of this article? Can we expect a sweep for the MOOCH film crew? Or will the Rejects fail to hit a home run when the ball is teed up for them five feet away from the fence?</p>
       </article>
 
-      <div class="jury-carousel">
-        <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize" onclick="openModal(this)">
-        <img src="images/Special Jury 2.jpg" alt="Special Jury Prize" onclick="openModal(this)">
-        <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director" onclick="openModal(this)">
-        <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance" onclick="openModal(this)">
-        <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay" onclick="openModal(this)">
-        <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta" onclick="openModal(this)">
-        <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance" onclick="openModal(this)">
+      <div class="carousel-wrapper">
+        <button class="carousel-arrow left">&#10094;</button> <!-- Left Arrow -->
+        
+        <div class="jury-carousel" id="jury-carousel">
+          <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize">
+          <img src="images/Special Jury 2.jpg" alt="Special Jury Prize">
+          <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director">
+          <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance">
+          <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay">
+          <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta">
+          <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance">
+        </div>
+      
+        <button class="carousel-arrow right">&#10095;</button> <!-- Right Arrow -->
       </div>
 
       <p style="margin-top: 40px;">
