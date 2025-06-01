@@ -36,6 +36,43 @@
       background: #fff;
     }
 
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 8px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    .close-btn:hover {
+      color: #f73eff;
+    }
+
     .hero-story img {
       max-width: 100%;
       border-radius: 5px;
@@ -83,13 +120,13 @@
       </article>
 
       <div class="jury-carousel">
-        <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize">
-        <img src="images/Special Jury 2.jpg" alt="Special Jury Prize">
-        <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director">
-        <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance">
-        <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay">
-        <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta">
-        <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance">
+        <img src="images/Offiial Jury 1.001.jpeg" alt="Grand Jury Prize" onclick="openModal(this)">
+        <img src="images/Special Jury 2.jpg" alt="Special Jury Prize" onclick="openModal(this)">
+        <img src="images/Offiial Jury 1.003.jpeg" alt="Best Director" onclick="openModal(this)">
+        <img src="images/Best Lead 2.jpeg" alt="Best Lead Performance" onclick="openModal(this)">
+        <img src="images/Offiial Jury 1.005.jpeg" alt="Best Screenplay" onclick="openModal(this)">
+        <img src="images/Official Jury .001.jpeg" alt="Spirit of Rejecta" onclick="openModal(this)">
+        <img src="images/Anonymous.001.jpeg" alt="Innovation & Pure Brilliance" onclick="openModal(this)">
       </div>
 
       <p style="margin-top: 40px;">
@@ -124,5 +161,27 @@
         document.getElementById("global-header").innerHTML = data;
       });
   </script>
+  <!-- MODAL VIEWER -->
+<div id="imageModal" class="modal" onclick="closeModal(event)">
+  <span class="close-btn" onclick="closeModal(event)">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+<script>
+  function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  function closeModal(event) {
+    if (
+      event.target.id === "imageModal" || 
+      event.target.classList.contains("close-btn")
+    ) {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  }
+</script>
 </body>
 </html>
